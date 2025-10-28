@@ -10,15 +10,9 @@ namespace SmartGarage_Exercise;
 		/// <summary>
 		/// מייצגת מכונית בעלת מנוע דלק.
 		/// </summary>
-		public class Car
+		public class Car:Viacle
 		{
-			/// <summary>
-			/// שם הדגם של המכונית.
-			/// </summary>
-			public string ModelName
-			{
-				get; set;
-			}
+	
 
 			/// <summary>
 			/// אחוז הדלק הנוכחי (בין 0 ל-100).
@@ -44,7 +38,7 @@ namespace SmartGarage_Exercise;
 			/// <summary>
 			/// מבצע פעולת נסיעה הצורכת דלק.
 			/// </summary>
-			public void Drive()
+			public override void Drive()
 			{
 				if (FuelPercentage > 10)
 				{
@@ -66,21 +60,21 @@ namespace SmartGarage_Exercise;
 				FuelPercentage = 100;
 			}
 
-			/// <summary>
-			/// מזיז את המכונית שמאלה.
-			/// </summary>
-			public void MoveLeft()
-			{
-				Console.WriteLine($"Car {ModelName} turns left.");
-			}
+    /// <summary>
+    /// מזיז את המכונית שמאלה.
+    /// </summary>
+    public override void  MoveLeft()
+    {
+        Console.WriteLine($"Car {ModelName} turns left.");
+    }
 
-			/// <summary>
-			/// מזיז את המכונית ימינה.
-			/// </summary>
-			public void MoveRight()
-			{
-				Console.WriteLine($"Car {ModelName} turns right.");
-			}
-		}
+    /// <summary>
+    /// מזיז את המכונית ימינה.
+    /// </summary>
+    public override void MoveRight()
+    {
+        Console.WriteLine($"Car {ModelName} turns right.");
+    }
+}
 
 	
